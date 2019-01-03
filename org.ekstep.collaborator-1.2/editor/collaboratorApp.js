@@ -52,12 +52,6 @@ angular.module('collaboratorApp', ['angular-inview'])
 
 
         $scope.init = function () {
-            $(document).keydown(function (e) {
-                // ESCAPE key pressed
-                if (e.keyCode == 27) {
-                    $scope.closePopup();
-                }
-            });
             $scope.getContentCollaborators();
         }
 
