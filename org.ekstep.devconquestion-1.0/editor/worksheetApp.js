@@ -200,7 +200,8 @@ angular.module('worksheetApp', ['angular-inview'])
                     type: "POST",
                     "async": true,
                     "crossDomain": true,
-                    url: "/pdf2text/uploadFile",
+                    // url: "/pdf2text/uploadFile",
+                    url: "https://dev.ekstep.in/api/content/v3/pdf2text/uploadFile",
                     headers: {
                         "cache-control": "no-cache",
                     },
@@ -253,6 +254,7 @@ angular.module('worksheetApp', ['angular-inview'])
                         position: 'topCenter',
                         icon: 'fa fa-warning'
                     });
+                    ecEditor.dispatchEvent('org.ekstep.questionset:showPopup');
                     $scope.closeThisDialog();
                     $scope.$safeApply();
                 },
